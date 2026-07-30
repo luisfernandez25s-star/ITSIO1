@@ -4,8 +4,12 @@
   "private": true,
   "type": "module",
   "scripts": {
+<<<<<<< HEAD
     "dev": "vite",
     "dev:full": "concurrently -k -n API,WEB -c green,cyan \"node server/index.js\" \"vite\"",
+=======
+    "dev": "concurrently -k -n API,WEB -c green,cyan \"node server/index.js\" \"vite\"",
+>>>>>>> 2c032c9b0204455cddd0d4768328096c74b63001
     "dev:web": "vite",
     "dev:api": "node server/index.js",
     "db:setup": "psql \"$DATABASE_URL\" -f database/schema.sql -f database/seed.sql",

@@ -23,11 +23,19 @@ export const ROLES = {
 // y en meta.perm de las rutas. 'wellcome' = pantalla de inicio.
 export const ROLE_ROUTES = {
   admin: [
+<<<<<<< HEAD
     'wellcome', 'analytics', 'data-studio', 'dispatch', 'incidents', 'stateforce',
     'typeToVehicles', 'fleet-analytics', 'tools', 'training', 'reports', 'efficiency',
   ],
   comandante: [
     'wellcome', 'analytics', 'data-studio', 'dispatch', 'incidents', 'stateforce',
+=======
+    'wellcome', 'analytics', 'dispatch', 'incidents', 'stateforce',
+    'typeToVehicles', 'fleet-analytics', 'tools', 'training', 'reports', 'efficiency',
+  ],
+  comandante: [
+    'wellcome', 'analytics', 'dispatch', 'incidents', 'stateforce',
+>>>>>>> 2c032c9b0204455cddd0d4768328096c74b63001
     'typeToVehicles', 'fleet-analytics', 'tools', 'training', 'reports', 'efficiency',
   ],
   oficial: [

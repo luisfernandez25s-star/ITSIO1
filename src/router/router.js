@@ -20,7 +20,10 @@ import FleetAnalyticsView from '@/views/FleetAnalyticsView.vue'
 import EquipmentView from '@/views/EquipmentView.vue'
 import ReportsView from '@/views/ReportsView.vue'
 import EfficiencyView from '@/views/EfficiencyView.vue'
+<<<<<<< HEAD
 import DataStudioView from '@/views/DataStudioView.vue'
+=======
+>>>>>>> 2c032c9b0204455cddd0d4768328096c74b63001
 
 const routes = [
   { path: '/login', name: 'LoginView', component: LoginView, meta: { public: true, hideChrome: true } },
@@ -35,7 +38,10 @@ const routes = [
   
   // New routes
   { path: '/analytics', name: 'AnalyticsView', component: AnalyticsView, meta: { perm: 'analytics' } },
+<<<<<<< HEAD
   { path: '/data-studio', name: 'DataStudioView', component: DataStudioView, meta: { perm: 'data-studio' } },
+=======
+>>>>>>> 2c032c9b0204455cddd0d4768328096c74b63001
   { path: '/incidents', name: 'IncidentsView', component: IncidentsView, meta: { perm: 'incidents' } },
   { path: '/dispatch', name: 'DispatchView', component: DispatchView, meta: { perm: 'dispatch' } },
   { path: '/notifications', name: 'NotificationsView', component: NotificationsView }, // sin perm

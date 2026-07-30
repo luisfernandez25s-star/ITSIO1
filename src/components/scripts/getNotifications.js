@@ -1,5 +1,6 @@
 import { api } from '@/utils/api'
 
+<<<<<<< HEAD
 // ---- Datos mock (fallback cuando la API de Express no esta disponible) ----
 const min = (m) => new Date(Date.now() - m * 60000)
 const hrs = (h) => new Date(Date.now() - h * 3600000)
@@ -53,6 +54,29 @@ export async function markAllAsRead() {
   } catch {
     return null
   }
+=======
+// ---- Datos (desde la API) ----
+export async function getNotifications() {
+  const list = await api.get('/notifications')
+  return list.map(n => ({
+    ...n,
+    createdAt: n.createdAt ? new Date(n.createdAt) : null,
+    readAt: n.readAt ? new Date(n.readAt) : null
+  }))
+}
+
+export async function getUnreadCount() {
+  const { count } = await api.get('/notifications/unread-count')
+  return count
+}
+
+export async function markAsRead(id) {
+  return api.patch(`/notifications/${id}/read`, {})
+}
+
+export async function markAllAsRead() {
+  return api.post('/notifications/read-all', {})
+>>>>>>> 2c032c9b0204455cddd0d4768328096c74b63001
 }
 
 // ---- Helpers (sin cambios) ----
