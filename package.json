@@ -1,0 +1,30 @@
+{
+  "name": "itsio-webapp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:full": "concurrently -k -n API,WEB -c green,cyan \"node server/index.js\" \"vite\"",
+    "dev:web": "vite",
+    "dev:api": "node server/index.js",
+    "db:setup": "psql \"$DATABASE_URL\" -f database/schema.sql -f database/seed.sql",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "chart.js": "^4.5.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pg": "^8.22.0",
+    "vue": "^3.5.13",
+    "vue-chartjs": "^5.3.4",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.3",
+    "concurrently": "^10.0.3",
+    "vite": "^6.3.5"
+  }
+}
